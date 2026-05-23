@@ -9,5 +9,5 @@ resource "null_resource" "hello" {
 }
 
 output "message" {
-  value = "Workspace ran successfully"
+  value = "Workspace ran successfully after changes"
 }
