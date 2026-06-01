@@ -3,9 +3,6 @@ terraform {
 }
 
 resource "null_resource" "hello" {
-  triggers = {
-    always_run = timestamp()
-  }
   provisioner "local-exec" {
     command = "echo Hello from Terrakube"
   }
