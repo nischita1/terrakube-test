@@ -3,6 +3,9 @@ terraform {
 }
 
 resource "null_resource" "hello" {
+  triggers = {
+    always_run = timestamp()
+  }
   provisioner "local-exec" {
     command = "echo Hello from Terrakube"
   }
@@ -10,12 +13,4 @@ resource "null_resource" "hello" {
 
 output "message" {
   value = "Workspace ran successfully after changes !"
-}
-resource "null_resource" "hello" {
-  triggers = {
-    always_run = timestamp()
-  }
-  provisioner "local-exec" {
-    command = "echo Hello from Terrakube"
-  }
 }
