@@ -4,10 +4,10 @@ terraform {
 
 resource "null_resource" "hello" {
   provisioner "local-exec" {
-    command = "echo Hello from Terrakube"
+    command = "echo Hello from Terrakube new" 
   }
 }
 
 output "message" {
-  value = "Workspace ran successfully after changes !"
+  value = "Workspace ran successfully after changes !!!"
 }
